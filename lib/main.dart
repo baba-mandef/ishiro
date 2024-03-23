@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:ishiro/router.dart';
+import 'package:ishiro/themes/light.dart';
+
 
 void main() {
-  runApp(Ishiro());
+  runApp(const Ishiro());
 }
 
 class Ishiro extends StatelessWidget {
@@ -9,10 +12,11 @@ class Ishiro extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const  MaterialApp(
-      home: Scaffold(
-        body: Text("yo"),
-      ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: light,
+      initialRoute: '/one',
+      routes: routes,
     );
   }
 }
